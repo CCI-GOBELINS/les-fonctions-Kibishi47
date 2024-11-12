@@ -31,3 +31,23 @@ fun getNumbers(x: Int, isEven: Boolean = true): List<Int> {
 
 println(getNumbers(10, isEven = true))
 println(getNumbers(10, isEven = false))
+
+fun getFibonacciNumbers(x: Int): List<Int> {
+    if (x > 0) {
+        var numbers = mutableListOf<Int>()
+        var startingNumber = 0
+        for (i in 0..x-1) {
+            if (numbers.count() == 0 || numbers.count() == 1) {
+                numbers.add(1)
+            } else {
+                numbers.add(numbers[i-2] + numbers[i-1])
+            }
+        }
+        return numbers
+    } else {
+        println("You can not get a number of amount of 0 or less")
+        return listOf<Int>()
+    }
+}
+
+println(getFibonacciNumbers(10))
