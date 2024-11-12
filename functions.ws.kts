@@ -51,3 +51,13 @@ fun getFibonacciNumbers(x: Int): List<Int> {
 }
 
 println(getFibonacciNumbers(10))
+
+fun factorial(x: Int = 10): Int {
+    var result = 1
+    for (i in 1..x) {
+        result *= i
+    }
+    return result
+}
+
+println(factorial(5))
